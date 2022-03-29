@@ -1,6 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
-from zmq import device
+
 # Create your models here.
 
 
