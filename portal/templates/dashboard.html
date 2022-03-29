@@ -1,0 +1,51 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{% static 'form.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'profilecard.css' %}">
+    
+</head>
+
+<body>
+
+    <div class="frame">
+        <div class="center">
+          
+              <div class="profile">
+                  <div class="image">
+                      <div class="circle-1"></div>
+                      <div class="circle-2"></div>
+                      <img src="{{user.userprofile.photo.url}}" width="70" height="70" alt="Jessica Potter">
+                  </div>
+                  
+                  <div class="name">{{user.username}}</div>
+                  <div class="Location">{{user.userprofile.status}}</div>
+                  <div class="Location">{{user.userprofile.location}}</div>
+                  
+                  <div class="actions">
+                      <button class="btn"><a style="text-decoration: None;" href="{% url 'update' %}">Edit Profile</a></button>
+                      <button class="btn">Message</button>
+                  </div>
+              </div>
+              
+              <div class="stats">
+                  <div class="box">
+                      <span class="value">523</span>
+                      <span class="parameter">Posts</span>
+                  </div>
+                  <div class="box">
+                      <span class="value">1387</span>
+                      <span class="parameter">Likes</span>
+                  </div>
+                  <div class="box">
+                      <span class="value">146</span>
+                      <span class="parameter">Follower</span>
+                  </div>
+              </div>
+        </div>
+      </div>
+    
+</body>
+</html>

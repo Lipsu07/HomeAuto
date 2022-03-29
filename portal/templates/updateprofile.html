@@ -1,0 +1,31 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{% static 'form.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'profilecard.css' %}">
+    
+</head>
+
+<body>
+    <div class="main">
+        <br>
+        <label aria-hidden="true">Edit Profile</label>
+    <div class="signup">
+        <form method ="POST" action="{% url 'update' %}" enctype="multipart/form-data">
+            {% csrf_token %}
+            
+            <input type="text" name="status" placeholder="status">
+            <input type="text" name="Location" placeholder="Location">
+            
+            <input type ="file" name="image">
+            <button> Update Profile</button>
+
+        </form>
+
+        </div>
+
+    
+</body>
+</html>
